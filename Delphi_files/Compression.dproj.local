@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/01/23 23:11:38.000.014,=C:\Users\Marius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/17 19:30:51.000.118,=C:\Users\Marius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/25 15:30:47.000.680,=C:\Users\Marius\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/03/25 15:31:31.000.165,C:\Users\Marius\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Marius\Documents\Embarcadero\Studio\Compression\UPrincP.pas</Transaction>
+    <Transaction>2022/03/25 15:31:31.000.165,C:\Users\Marius\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Marius\Documents\Embarcadero\Studio\Compression\UPrincP.dfm</Transaction>
+    <Transaction>2022/03/25 15:31:38.000.985,C:\Users\Marius\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Marius\Documents\Embarcadero\Studio\Compression\Compression.dproj</Transaction>
+    <Transaction>2022/03/26 02:30:07.000.472,=C:\Users\Marius\Documents\Embarcadero\Studio\Compression\Unit1.pas</Transaction>
+    <Transaction>2022/03/26 02:30:22.000.095,C:\Users\Marius\Documents\Embarcadero\Studio\Compression\ImageButton.pas=C:\Users\Marius\Documents\Embarcadero\Studio\Compression\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
