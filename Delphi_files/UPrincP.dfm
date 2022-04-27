@@ -4834,7 +4834,6 @@ object FPrincP: TFPrincP
       Caption = 'Start'
       TabOrder = 1
       Visible = False
-      OnClick = Button1Click
     end
     object Memo2: TMemo
       Left = 312
@@ -4872,16 +4871,6 @@ object FPrincP: TFPrincP
       Caption = 'Reset'
       TabOrder = 4
       Visible = False
-      OnClick = Button2Click
-    end
-    object Memo4: TMemo
-      Left = 696
-      Top = 240
-      Width = 185
-      Height = 89
-      Lines.Strings = (
-        'Memo4')
-      TabOrder = 5
     end
   end
   object ImageList1: TImageList

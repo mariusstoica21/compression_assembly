@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,ShellAPI,
   Vcl.Grids, Vcl.Imaging.pngimage, System.ImageList, Vcl.ImgList,ImageButton,
-  System.Actions, Vcl.ActnList;
+  System.Actions, Vcl.ActnList, Vcl.Buttons;
 
 type
   TFPrincP = class(TForm)
@@ -27,9 +27,6 @@ type
     ActionList1: TActionList;
     PressStart: TAction;
     PressReset: TAction;
-    Memo4: TMemo;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure PressStartExecute(Sender: TObject);
     procedure PressResetExecute(Sender: TObject);
@@ -50,112 +47,46 @@ implementation
 
 
 
-procedure TFPrincP.Button1Click(Sender: TObject);
-var encrdecr : integer;
-    myText: TStringlist;
-    allText: string;
-    txt: TextFile;
-    s: string;
-    outPutList: TStringList;
-    i : integer;
-    MyString: String;
-    Splitted: TArray<String>;
-    row : integer;
-    Path: string;
-    A: array[0..300] of Char;
-    temp: string;
-begin
-  encrdecr := 0;
-
-  //Save the operation string to encrdecr.txt
-  myText:= TStringlist.create;
-  try
-    myText.Add(encrdecr.ToString);
-    myText.SaveToFile('Others/encrdecr.txt');
-  finally
-    myText.Free
-  end;
-
-  //Save the operation string to text.txt
-  myText:= TStringlist.create;
-  try
-    myText.Add(Memo1.Lines.Text);
-    myText.SaveToFile('Others/text.txt');
-  finally
-    myText.Free
-  end;
-
-
-  //Execute the assembly executable in order to read the string operation, parse
-  //it, and execute it.
-  Path := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
-  Path := Path + 'Others\compression1.exe';
-  ShellExecute(Handle, 'open',PChar(Path),
-  nil, nil, SW_SHOWNORMAL);
-//  ShellExecute(Handle, 'open','compression2.exe',
-//  nil, nil, SW_SHOWNORMAL);
-
-  //Sleep for one second in order to wait for the opeation to be executed
-  sleep(500);
-
-  //The result of the operation is saved in output.txt file
-  allText := '';
-  AssignFile(Txt, 'Others/output.txt');
-  Reset(txt);
-  while not Eof(txt) do
-  begin
-    Readln(txt, s);
-    allText := AllText + s;
-  end;
-  CloseFile(txt);
-
-  //The RichEdit component displays the result
-  Memo2.Lines.Text := alltext;
-
-
-
-  //The result of the operation is saved in output.txt file
-  allText := '';
-  AssignFile(Txt, 'Others/dict.txt');
-  Reset(txt);
-  while not Eof(txt) do
-  begin
-    Readln(txt, s);
-    allText := AllText + s;
-  end;
-  CloseFile(txt);
-
-
-  Splitted := alltext.Split([' ']);
-
-
-  allText := '';
-
-  for i := 0 to length(Splitted) - 2 do
-    Memo3.Lines.Add(Splitted[i] + ' ' + i.ToString);
-
-  Button1.Enabled := False;
-
-end;
-
-procedure TFPrincP.Button2Click(Sender: TObject);
-var txt: TextFile;
-begin
-  Memo1.Lines.Text := '';
-  Memo2.Lines.Text := '';
-  Memo3.Lines.Text := '';
-
-  deletefile('Others/encrdecr.txt');
-  deletefile('Others/text.txt');
-  deletefile('Others/output.txt');
-  deletefile('Others/dict.txt');
-
-  Button1.Enabled := True;
-end;
-
 procedure TFPrincP.FormShow(Sender: TObject);
 var txt: TextFile;
 begin
+  //Image reference 1
+  //edit.png
+  //<a href="https://www.flaticon.com/free-icons/edit" title="edit icons">
+  //Edit icons created by Kiranshastry - Flaticon</a>
+
+  //Image reference 2
+  //lock.png
+  //<a href="https://www.flaticon.com/free-icons/lock" title="lock icons">
+  //Lock icons created by Those Icons - Flaticon</a>
+
+  //Image reference 3
+  //book.png
+  //<a href="https://www.flaticon.com/free-icons/dictionary" title="dictionary icons">
+  //Dictionary icons created by srip - Flaticon</a>
+
+  //Image reference 4
+  //big-dictionary.png
+  //<a href="https://www.flaticon.com/free-icons/dictionary" title="dictionary icons">
+  //Dictionary icons created by Freepik - Flaticon</a>
+
+  //Image reference 5
+  //book_stack_of_three.png
+  //<a href="https://www.flaticon.com/free-icons/book" title="book icons">
+  //Book icons created by Freepik - Flaticon</a>
+
+  //Image reference 6
+  //play_button_arrowhead.png
+  //<a href="https://www.flaticon.com/free-icons/play" title="play icons">
+  //Play icons created by Freepik - Flaticon</a>
+
+  //Image reference 7
+  //rotate-left-circular-arrow-interface-symbol.png
+  //<a href="https://www.flaticon.com/free-icons/reset" title="reset icons">
+  //Reset icons created by Freepik - Flaticon</a>
+
+
+
   Btn1 := TImageButton.Create(self);
   Btn1.Images := ImageList1;
   Btn1.Index := 0;
@@ -212,12 +143,6 @@ var encrdecr : integer;
     Splitted: TArray<String>;
     row : integer;
     Path : string;
-    Path1 : string;
-    Path2 : string;
-    Path3 : string;
-    spath : string;
-    temp: string;
-    A: array[0..300] of Char;
 begin
   encrdecr := 0;
 
@@ -225,7 +150,6 @@ begin
   myText:= TStringlist.create;
   Path := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
   Path := Path + 'Others\encrdecr.txt';
-  Memo4.Lines.Text := Path;
   try
     myText.Add(encrdecr.ToString);
     myText.SaveToFile(PChar(Path));
@@ -237,12 +161,11 @@ begin
 
   //Save the operation string to text.txt
   myText:= TStringlist.create;
-  Path1 := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
-  Path1 := Path1 + 'Others\text.txt';
-  Memo4.Lines.Text := Path;
+  Path := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
+  Path := Path + 'Others\text.txt';
   try
     myText.Add(Memo1.Lines.Text);
-    myText.SaveToFile(PChar(Path1));
+    myText.SaveToFile(PChar(Path));
   finally
     myText.Free
   end;
@@ -250,35 +173,22 @@ begin
   //Execute the assembly executable in order to read the string operation, parse
   //it, and execute it.
 
-//  Path := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
-//  Path := Path + 'Others\calculator.exe';
-//  ShellExecute(Handle, 'open',PChar(Path),
-//  nil, nil, SW_SHOWNORMAL);
-  temp := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
-  temp := temp + 'Others\compression1.exe';
-  StrPCopy(A, temp);
 
-  //Path2 := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
-  //Path2 := Path2 + 'Others\compression1.exe';
-  Memo4.Lines.Text := Path2;
-  //ShowMessage('1');
+  Path := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
+  Path := Path + 'Others\compression.exe';
 
-  ShellExecute(Handle,nil,A ,nil, nil, SW_SHOWNORMAL);
-  //ShellExecute(Handle,nil,PChar(Path2) ,nil, nil, SW_SHOWNORMAL);
+  ShellExecute(Handle,nil,'compression_asm.exe' ,nil, nil, SW_SHOWNORMAL);
 
 
-//  ShellExecute(Handle, 'open','compression2.exe',
-//  nil, nil, SW_SHOWNORMAL);
-
-  //Sleep for one second in order to wait for the opeation to be executed
+  //Sleep for half a second in order to wait for the opeation to be executed
   sleep(500);
 
 
   //The result of the operation is saved in output.txt file
-  Path3 := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
+  Path := IncludeTrailingPathDelimiter(ExtractFilePath(Application.ExeName));
   allText := '';
-  Path3 := Path3 + 'Others\output.txt';
-  AssignFile(Txt, PChar(Path3));
+  Path := Path + 'Others\output.txt';
+  AssignFile(Txt, PChar(Path));
   Reset(txt);
   while not Eof(txt) do
   begin
