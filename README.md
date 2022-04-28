@@ -108,12 +108,17 @@ The project consists of two main components:
 
 ## Tutorial
 
+The first step is to run the app by following the Installation topic above. The user will write the desired text in the "Text" area and will press
+the 'Start' button in order to execute the compression.
 
 <p align="center">
   <img 
     src="https://i.postimg.cc/Hx93v39r/2.jpg"
   >
 </p>
+
+After pressing the 'Start' button, the input text is compressed. The result of the compression is showed in the "Result" area, while the dictionary
+generated based on the compression is displayed in the "Dictionary" area. In order to restart the process, the user may press the 'Restart' button.
 
 <p align="center">
   <img 
