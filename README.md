@@ -66,6 +66,62 @@ The project consists of two main components:
 ▶️ Compression.exe : application executable.
 
 
+### Technologies
+
+<table>
+  <tr>
+    <th>🔨 Tools/Framework</th>
+    <th>📘 Language</th>
+    <th>📃 Usage </th>
+    <th>📚 Files</th>
+    <th> ℹ Details  </th>
+  </tr>
+  <tr>
+    <td>Delphi</td>
+    <td>Objective Pascal</td>
+    <td>Desktop app & GUI</td>
+    <td>UPrincP.pas</td>
+    <td>
+       <ul>
+        <li>UPrincP.pas is the main form of the desktop application.</li>
+        <li>The user can write the input text in the 'Text'area.</li>
+        <li>By pressing the 'Start' button, the text will be compressed into a smaller text, that will be displayed.</li>
+        <li>A dictionary based on the compression will also be displayed.</li>
+        <li>By pressing the 'Reset' button, the proccess of compression will be reinitialized.</li>
+      </ul>
+   </td>
+  </tr>
+  <tr>
+    <td>Notepad++ MASM</td>
+    <td>Assembly x86</td>
+    <td>Read input and perform operations</td>
+    <td>calculator.asm</td>
+    <td>
+       <ul>
+        <li>Others/calculator.exe is the executable file of calculator.asm.</li>
+        <li>The assembly app reads the input text from a file and compresses it, creating an output text, much smaller in size, and a dictionary</li>
+        <li>The output text and the dictionary are saved in separate files.</li>
+      </ul>
+   </td>
+  </tr>
+</table>
+
+## Tutorial
+
+
+<p align="center">
+  <img 
+    src="https://i.postimg.cc/Hx93v39r/2.jpg"
+  >
+</p>
+
+<p align="center">
+  <img 
+    src="https://i.postimg.cc/nVT0vRL5/3.jpg"
+  >
+</p>
+
+
 ## Authors
 
 - [@mariusstoica21](https://github.com/mariusstoica21)
