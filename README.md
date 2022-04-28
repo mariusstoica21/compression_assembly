@@ -113,7 +113,7 @@ the 'Start' button in order to execute the compression.
 
 <p align="center">
   <img 
-    src="https://i.postimg.cc/Hx93v39r/2.jpg"
+    src="https://i.postimg.cc/bJZkkTFX/7.jpg"
   >
 </p>
 
@@ -122,7 +122,7 @@ generated based on the compression is displayed in the "Dictionary" area. In ord
 
 <p align="center">
   <img 
-    src="https://i.postimg.cc/nVT0vRL5/3.jpg"
+    src="https://i.postimg.cc/dt2d2Dn0/8.jpg"
   >
 </p>
 
