@@ -20,7 +20,50 @@ button in order to compress the input text, the desktop app will run "compresssi
 
 The project consists of two main components:
 - Assembly x86 component
+  - the assembly app reads the input text from a file and compresses it, creating an output text, much smaller in size, and a dictionary;
+  - the output text is stored in "Others/output.txt", while the dictionary is saved in "Others/dict.txt".
 - Delphi component
+  - the desktop app offers the opportunity for the user to write an input text and start the compression;
+  - the input text is stored in "Others/text.txt";
+  - after the compression has taken place, the desktop app reads the resulted text and the dictionary and outputs them.
+
+## Installation
+- Go to https://github.com/mariusstoica21/compression_assembly.
+- Click the green **'Code'** button.
+- Click **'Download ZIP'**.
+- Run the app by double-clicking **'Compression.exe'**.
+
+## Summary
+✅ G.U.I. 
+
+✅ Ease of installation
+
+❌ Additional hardware needed
+
+✅ Video available
+
+❌ Documentation
+
+
+## Project description
+
+### Folder structure
+
+📁 Delphi_files : contains the Delphi project (it can be imported).
+
+- 📄 [UPrincP.pas](https://github.com/mariusstoica21/compression_assembly/blob/main/Delphi_files/UPrincP.pas): main form of the app.
+
+📁 Others : contains files requied for the application flow.
+  - 📄 encrdecr.txt : file that contains '0' for compression, '1' for decompression.
+  - 📄 text.txt : input text written by user in order to compress it.
+  - 📄 output.txt : the result after the compression.
+  - 📄 dict.txt : dictionary created after the execution of compression.
+📄 [compression.asm](https://github.com/mariusstoica21/compression_assembly/blob/main/compression.asm)
+: assembly_x86 file.
+
+▶️ compression_asm.exe : assembly file that reads the input text and compresses it into a smaller string.
+
+▶️ Compression.exe : application executable.
 
 
 ## Authors
