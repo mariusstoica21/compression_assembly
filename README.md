@@ -66,6 +66,7 @@ The project consists of two main components:
   - 📄 text.txt : input text written by user in order to compress it.
   - 📄 output.txt : the result after the compression.
   - 📄 dict.txt : dictionary created after the execution of compression.
+  
 📄 [compression.asm](https://github.com/mariusstoica21/compression_assembly/blob/main/compression.asm)
 : assembly_x86 file.
 
