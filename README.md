@@ -6,6 +6,14 @@
   >
 </p>
 
+<p align="left">
+  <img 
+    src="https://i.postimg.cc/GtPYddVJ/Component-74-1.png"
+  >
+</p>
+
+
+
 
 
 # Compression - Assembly x86 and Delphi
