@@ -40,7 +40,7 @@ The project consists of two main components:
 
 ❌ Additional hardware needed
 
-✅ Video available
+✅ [Video available](https://www.youtube.com/watch?v=vidM-akudIY&list=PLepK0OW96HDlO9ZFQbR8YJ2-4iCYCZgcQ&index=2)
 
 ❌ Documentation
 
