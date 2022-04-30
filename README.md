@@ -1,10 +1,10 @@
 
 
-<p align="left">
+<!-- <p align="left">
   <img 
     src="https://github.com/mariusstoica21/compression_assembly/blob/main/Images/Header.png"
   >
-</p>
+</p> -->
 
 <p align="left">
   <img 
